@@ -25,7 +25,7 @@
       <link rel="stylesheet" href="{{ url_for('home.static', filename='css/base.css') }}">
     </head>
   {% endblock %}
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     {% block header %}
       <header>
         <nav class="navbar navbar-expand-custom navbar-dark bg-light py-0">
@@ -75,7 +75,7 @@
       </header>
     {% endblock %}
     {% block main_content %}{% endblock %}
-    <footer class="home-footer">
+    <footer class="home-footer mt-auto">
       {% block footer %}
       <p>
         Words - Copyright &copy; {{ now.year }} by <a href="https://ryanwarrick.com/">Ryan Warrick</a>.
