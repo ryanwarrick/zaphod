@@ -4,7 +4,6 @@
 
 ![license](https://img.shields.io/github/license/ryanwarrick/zaphod)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ryanwarrick/zaphod)
-![GitHub last commit](https://img.shields.io/github/last-commit/ryanwarrick/zaphod)
 [![GitHub issues](https://img.shields.io/github/issues/ryanwarrick/zaphod)](https://github.com/ryanwarrick/zaphod/issues)
 [![](https://tokei.rs/b1/github/ryanwarrick/zaphod)](https://github.com/ryanwarrick/zaphod)
 [![](https://tokei.rs/b1/github/ryanwarrick/zaphod?category=files)](https://github.com/ryanwarrick/zaphod)
