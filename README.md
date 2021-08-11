@@ -6,6 +6,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ryanwarrick/zaphod)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ryanwarrick/zaphod)
 [![GitHub issues](https://img.shields.io/github/issues/ryanwarrick/zaphod)](https://github.com/ryanwarrick/zaphod/issues)
+[![](https://tokei.rs/b1/github/ryanwarrick/zaphod)](https://github.com/ryanwarrick/zaphod)
+[![](https://tokei.rs/b1/github/ryanwarrick/zaphod?category=files)](https://github.com/ryanwarrick/zaphod)
 [![code with hearth by ryanwarrick](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-ryanwarrick-ff1414.svg?style=flat-square)](https://github.com/ryanwarrick)
 
 # Summary
