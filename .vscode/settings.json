@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": ".venv\\Scripts\\python.exe",
+    "python.pythonPath": "venv\\Scripts\\python.exe",
     "python.formatting.provider": "autopep8",
     "python.formatting.autopep8Args": [
         "--max-line-length",
@@ -20,14 +20,4 @@
     "emmet.includeLanguages": {
         "jinja-html": "html"
     }
-    // "sqltools.connections": [
-    //     {
-    //         "previewLimit": 50,
-    //         "driver": "SQLite",
-    //         "name": "zaphod",
-    //         "database": "${workspaceFolder:zaphod}/instance/zaphod.sqlite"
-    //     }
-    // ],
-    // "editor.defaultFormatter": "vscode.emmet"
-    // "sqltools.useNodeRuntime": true
 }
