@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+
+
+{% block header %}
+  {{ super() }}
+  <div class="container">
+    <img class="banner" src="{{ url_for('home.static', filename='images/404.jpg') }}">
+  </div>
+{% endblock %}
+
+
+{% block main_content %}
+
+<div class="container">
+  <div class="col-md-12 text-center">
+    <span class="display-1 d-block">404</span>
+    <div class="mb-2 lead">Page not Found</div>
+    <a href="{{ url_for('home.home') }}" class="btn btn-link mb-2">Return to Home</a>
+  </div>
+</div>
+
+
+{% endblock %}

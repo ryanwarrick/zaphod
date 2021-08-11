@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% import 'blog/macros.html' as macros %}
+
+{% block main_content %}
+<main class="container-fluid px-3">
+  {% for post in posts %}
+    {{ macros.blog_post(post) }}
+  {% endfor %}
+</main>
+{% endblock %}

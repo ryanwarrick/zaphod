@@ -1,0 +1,9 @@
+### INCLUDES ###
+include LICENSE.txt
+
+### GRAFTS ###
+graft zaphod
+graft tests
+
+### EXCLUDES ###
+global-exclude *.pyc

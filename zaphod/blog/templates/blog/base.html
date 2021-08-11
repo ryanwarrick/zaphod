@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block head %}
+  {{ super() }}
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('home.static', filename='css/content.css') }}">
+  <link rel="stylesheet" href="{{ url_for('home.static', filename='css/content_code_highlighting.css') }}">
+  <link rel="stylesheet" href="{{ url_for('blog.static', filename='css/blog.css') }}">
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="container-fluid p-0">
+    <img class="banner" src="{{ url_for('blog.static', filename='images/forest.jpg') }}">
+  </div>
+{% endblock %}

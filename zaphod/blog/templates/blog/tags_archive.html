@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block main_content %}
+<main class="container">
+  <div class="text-center m-2">
+    <h1>Tags</h1>
+    {# {% set tag_frequency_tuples = data %} #}
+    {% for tag_frequency in tag_frequency_table %}
+      <a class="tag" href="{{ url_for('blog.posts_by_tag', selected_tag=tag_frequency[0], _external=True) }} ">{{ tag_frequency[0] }} ({{ tag_frequency[1] }})</a>
+      </br>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

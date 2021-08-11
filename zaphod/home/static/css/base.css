@@ -1,0 +1,132 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+/*
+ * Colors
+ */
+
+:root {
+  /* CSS HEX */
+  --persian-rose: #f7389d;
+  --skobeloff: #408585;
+  --skobeloff-old: #297373;
+  --pale-spring-bud: #e3e4d2;
+  --onyx: #313638;
+  --cotton-candy: #ffc2d9;
+  --uranian-blue: #AFD2E9;
+  --post-background: #e5e4e6;
+  --tree-green: #546347;
+}
+
+/*
+ * Home temp
+ */
+
+div.temp-message>ul, div.temp-message>h2 {
+  text-align: center;
+}
+
+div.temp-message ul {
+  list-style: inside;
+}
+
+/*
+ * Nav
+ */
+
+nav.navbar, nav.navbar>div.navbar-collapse>ul.navbar-nav>li.dropdown>ul.dropdown-menu {
+  background: var(--tree-green)!important;
+}
+
+nav.navbar ul.dropdown-menu {
+  position: absolute !important;
+}
+
+@media (min-width: 400px) {
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex!important;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+}
+
+/* ul.dropdown-menu {
+  background: var(--pale-spring-bud)!important;
+} */
+
+/*
+ * Banner
+ */
+
+img.banner {
+  object-fit: cover;
+  width: 100%;
+  height: 75px;
+  object-position: center 30%;
+}
+
+img.banner-home {
+  object-position: center 80%;
+}
+
+@media (min-width: 576px) {
+  /* Small devices (landscape phones, 576px and up) */
+  img.banner {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Medium devices (tablets, 768px and up) */
+  img.banner {
+    height: 175px;
+  }
+}
+
+/*
+ * General
+ */
+
+body {
+  background: var(--pale-spring-bud);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Footer
+ */
+
+.home-footer {
+  padding: 2.5rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+
+.home-footer p {
+  margin-bottom: 0;
+}

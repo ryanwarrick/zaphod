@@ -1,0 +1,28 @@
+{% extends 'dota/base.html' %}
+{% import 'dota/macros.html' as macros %}
+
+{% block head %}
+  <!-- DataTables Bootstrap CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
+  <!-- Base jQuery JS -->
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Datatables jQuery JS -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <!-- Bootstrap Bootstrap JS -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+    	$('.table').DataTable( {
+        "lengthMenu": [[15, 30, -1], [15, 30, "All"]]
+      } );
+	});
+  </script>
+{% endblock %}
+
+{% block header %}
+  <h1> Legs - All Dota Heroes </h1>
+{% endblock %}
+
+{% block content %}
+  {{ macros.tableFromDictList(dota_heroes) }}
+{% endblock %}

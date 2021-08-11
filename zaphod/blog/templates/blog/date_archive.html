@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% import 'blog/macros.html' as macros %}
+
+{% block main_content %}
+<main class="container-fluid">
+  <div class="text-center m-2">
+    <h1>Archive</h1>
+    {% for row_index, year in enumerate(date_data) %}
+      {{ macros.date_archive_year_row(date_data, year, num_to_month_dict, row_index) }}
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

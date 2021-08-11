@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+{% block main_content %}
+<div class="container">
+  <div class="temp-message row">
+    <h2>Website Currently Under Development</h2>
+    <ul>
+      <li>Skeleton/filler content added throughout site for testing & example purposes only.</li>
+      <li>Real content coming soon...</li>
+      <li>Source code will be published to GitHub soon (pending code cleanup and review)...</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="container-fluid p-0">
+    <img class="banner banner-home" src="{{ url_for('home.static', filename='images/lights.jpg') }}">
+  </div>
+{% endblock %}

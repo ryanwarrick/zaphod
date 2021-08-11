@@ -1,0 +1,13 @@
+{% extends "articles/base.html" %}
+
+{% block main_content %}
+<main class="container-fluid px-3">
+  <article class="content my-2 p-2 border border-3">
+    <h1 class="text-center content-title m-0">
+      <a class="content-title-link" href="{{ url_for(request.endpoint, path=path) }}"> {{ article.title }} </a>
+    </h1>
+    <div class="row border-bottom border-2 m-1"></div>
+    {{ article.html|safe }}
+  </article>
+</main>
+{% endblock %}

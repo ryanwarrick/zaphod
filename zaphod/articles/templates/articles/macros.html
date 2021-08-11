@@ -1,0 +1,28 @@
+{% macro build_articles_tree(articles_tree) %}
+  <ul class="article-tree list-group">
+    {% for elem in articles_tree|sort(attribute='type', reverse=true) recursive %}
+      {% if elem['type'] == 'directory' %}
+        <li class="directory-leaf list-group-item">
+          <i class="bi bi-folder"></i>
+          <a href="{{ url_for('articles.articles_tree_traversal', path=elem['content_articles_dir_relative_file_path']) }}">
+            {{ elem['name'] }}
+          </a>
+        </li>
+      {% else %}
+        <li class="file-leaf list-group-item">
+          <i class="bi bi-file-earmark-richtext"></i>
+          <a href="{{ url_for('articles.article', path=elem['article'].content_articles_dir_relative_filepath) }}">
+            {{ elem['article'].title }}
+          </a>
+        </li>
+      {% endif %}
+      {% if elem['children'] %}
+      <li class="directory-group list-group-item">
+        <ul class="list-group">
+          {{ loop(elem['children']) }}
+        </ul>
+      </li>
+      {% endif %}
+    {% endfor %}
+  <ul>
+{% endmacro %}

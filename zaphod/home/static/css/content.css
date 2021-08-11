@@ -1,0 +1,78 @@
+/* stylelint-disable selector-list-comma-newline-after */
+
+/*
+ * Content
+ */
+
+.content {
+  background: white;
+  border-color: var(--skobeloff)!important;
+}
+
+.content .content-title {
+  color: var(--tree-green);
+  font-weight: bold;
+}
+
+.content .content-date>i, .content-date>p {
+  display: inline;
+  font-size: medium;
+}
+
+.content .content-title-link {
+  color: var(--tree-green);
+  font-weight: bold;
+}
+
+.content>.border-bottom {
+  border-bottom-color: var(--tree-green)!important;
+  border-bottom-style: dashed!important;
+}
+
+.content .tags>.tag-link, .tags>.tag-icon {
+  padding: 2px;
+}
+
+.content .tags>.tag-icon {
+  font-size: medium;
+}
+
+.content .tags>.tag-link {
+  font-size: small;
+  color: #ffffff;
+  background: #949494;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content blockquote {
+  position: relative;
+  margin-bottom: 1em;
+  padding: 12px 12px 12px 16px;
+}
+
+.content blockquote:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  border-radius: 8px;
+  background: #297373;
+}
+
+.content blockquote p {
+  margin-bottom: 0;
+}
+
+/* Pagination */
+
+/* .blog-pagination {
+  margin-bottom: 4rem;
+}
+
+.blog-pagination>.btn {
+  border-radius: 2rem;
+} */

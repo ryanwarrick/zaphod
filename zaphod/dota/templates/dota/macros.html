@@ -1,0 +1,32 @@
+{# table for dict list #}
+{% macro tableFromDictList(dictList) -%}
+  <table id="table" class="table table-striped table-hover table-sm dataTable">
+  <!-- table header -->
+    {% if dictList %}
+      <thead class="thead-light">
+      {# <thead> #}
+        <tr>
+          <th>#</th>
+            {% for key in dictList[0] %}
+              <th> {{ key }} </th>
+            {% endfor %}
+        </tr>
+      <thead>
+      <tbody>	
+        <!-- table rows -->
+        {% for dict_item in dictList %}
+          {% if (loop.index % 2) == 0  %}
+            <tr class="even">
+          {% else %}
+            <tr class="odd">
+          {% endif %}
+          <td> {{loop.index}} </td>
+          {% for value in dict_item.values() %}
+            <td>  {{ value }} </td>
+          {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    {% endif %}
+  </table>
+{%- endmacro %}
