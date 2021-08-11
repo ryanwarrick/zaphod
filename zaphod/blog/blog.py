@@ -23,7 +23,6 @@ def post_feed():
 def tags_archive():
     tag_frequency_table = db.session.query(PostTag.name, func.count(
         PostTagMap.c.post_id).label('frequency')).join(PostTagMap).group_by(PostTag.name).order_by(desc(text('frequency')))
-    print(tag_frequency_table)
     tag_frequency_table = tag_frequency_table.all()
     return render_template('blog/tags_archive.html', tag_frequency_table=tag_frequency_table)
 
