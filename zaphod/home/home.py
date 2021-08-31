@@ -40,15 +40,3 @@ def home():
 @bp.route("/about")
 def about():
     return render_template('home/about.html')
-
-
-@bp.route('/resume')
-def resume():
-    resume_file_name = 'Resume - Ryan Warrick.pdf'
-    resume_file_path = os.path.join(
-        current_app.instance_path,
-        'content',
-        'misc_assets',
-        resume_file_name
-    )
-    return send_file(resume_file_path)

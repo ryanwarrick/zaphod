@@ -1,0 +1,7 @@
+/*
+ * Project Title Block
+ */
+
+div.title-block>h2, div.title-block>h5 {
+    text-align: center;
+}

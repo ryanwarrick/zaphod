@@ -1,0 +1,22 @@
+{% extends 'me/base.html' %}
+
+{% block head %}
+  {{ super() }}
+
+  <!-- Github Markdown CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+{% endblock %}
+
+{% block main_content %}
+<div class="container">
+  <div class="row">
+    <div class="title-block">
+      <h2>{{ projects[project]['name'] }}</h2>
+      <h5>(Content sourced from <a href="{{ projects[project]['repo_url'] }}">GitHub repo README</a>)</h5>
+    </div>
+    <div class="markdown-body">
+      {{ html|safe }}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'me/base.html' %}
+
+{% block main_content %}
+<main class="container">
+  <div class="text-center m-2">
+    <h1>Development Portfolio (Personal Projects)</h1>
+    <p>Here's a collection of open source projects I've developed using various open source tools and libraries.</p>
+    {% for key, value in projects.items() %}
+    <a class="project-link" href="{{ url_for('me.project', project=key) }}">{{ value['name']}} ({{ value['description'] }})</a>
+    </br>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

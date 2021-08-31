@@ -23,8 +23,8 @@
 
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="{{ url_for('home.static', filename='css/base.css') }}">
-    </head>
-  {% endblock %}
+    {% endblock %}
+  </head>
   <body class="d-flex flex-column min-vh-100">
     {% block header %}
       <header>
@@ -39,22 +39,25 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('home.home') }}">Home</a>
+                  <a class="nav-link {% if request.path == '/' or request.path.startswith('/home') %}active{% endif %}" href="{{ url_for('home.home') }}">Home</a>
                 </li>
-                {# <li class="nav-item">
-                  <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('home.about') }}">About</a>
-                </li> #}
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == '/resume' %}active{% endif %}" href="{{ url_for('home.resume') }}" target="_blank">Resume</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle {% if (request.path).startswith('/me') %}active{% endif %}" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
+                    Career
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ url_for('me.resume') }}" target="_blank">Resume</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('me.projects') }}">Development Portfolio (Personal Projects)</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle {% if (request.path).startswith('/blog') %}active{% endif %}" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                     Blog
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ url_for('blog.post_feed', _external=True) }}">All Posts</a></li>
-                    <li><a class="dropdown-item" href="{{ url_for('blog.tags_archive', _external=True) }}">Tags</a></li>
-                    <li><a class="dropdown-item" href="{{ url_for('blog.date_archive', _external=True) }}">Archive</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('blog.post_feed') }}">All Posts</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('blog.tags_archive') }}">Tags</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('blog.date_archive') }}">Archive</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -62,7 +65,7 @@
                     Articles
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ url_for('articles.articles_tree', _external=True) }}">All Articles</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('articles.articles_tree') }}">All Articles</a></li>
                   </ul>
                 </li>
                 {# <li class="nav-item">

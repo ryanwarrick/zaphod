@@ -2,4 +2,5 @@
 
 # See README.md file for instructions to build instance-specific config file that overwrites the default values set below.
 
-SECRET_KEY = 'dev' # Default value
+SECRET_KEY = 'dev'  # Default value
+RESUME_FILE_NAME = 'Resume.pdf'
