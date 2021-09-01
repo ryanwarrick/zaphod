@@ -125,7 +125,8 @@ def refresh_build():  # -r
 
 def main():
     argument_parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
     argument_parser.add_argument(
         "-c", "--cleanpy",
         action="store_true",

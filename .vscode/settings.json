@@ -1,19 +1,6 @@
 {
     "python.pythonPath": "venv\\Scripts\\python.exe",
-    "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Args": [
-        "--max-line-length",
-        "79"
-    ],
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 400,
-    "[python]": {
-        "editor.wordWrapColumn": 79
-    },
-    "autoDocstring.docstringFormat": "google",
-    "python.testing.unittestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": true,
+    
     "files.associations": {
         "*.html": "jinja-html"
     },
