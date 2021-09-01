@@ -177,6 +177,14 @@ After spending time testing this project, I quickly saw the need for automation 
     * configuring TLS certificates
   * For more info, see the zaphod_ansible [write-up](http://ryanwarrick.com/) on the website or check out the GitHub [repo](https://github.com/ryanwarrick/zaphod_ansible).
 
+# Files Not in Change Management (Manual Backups Required)
+Some files within projects are not controlled by change management as specified by the .gitignore config because they contain sensitive data, therefore it's not appropriate to sync them to a change management repository.
+
+Sensitive files:
+* <project_root>/instance/* (instance-specific content, config, and db files - entire dir)
+
+To avoid data loss of these files that aren't Git tracked, make sure to backup these files to a different location, as appropriate.
+
 # TODO - Possible Future Improvements:
 Below are some, but not all, possible future improvements to be developed for the project.
 - [ ] Add skeleton/filler data in examples dir under project root so that other users can work from examples when crafting their own instance data including: blog post files, article files, project_repos file, resume, etc.
