@@ -178,7 +178,7 @@ After spending time testing this project, I quickly saw the need for automation 
     * installing and configuring required apps/services
     * uploading site instance files
     * configuring TLS certificates
-  * For more info, see the zaphod_ansible [write-up](http://ryanwarrick.com/) on the website or check out the GitHub [repo](https://github.com/ryanwarrick/zaphod_ansible).
+  * For more info, see the [zaphod_ansible](https://github.com/ryanwarrick/zaphod_ansible) GitHub repo.
 
 # Files Not in Change Management (Manual Backups Required)
 Some files within projects are not controlled by change management as specified by the .gitignore config because they contain sensitive data, therefore it's not appropriate to sync them to a change management repository.
