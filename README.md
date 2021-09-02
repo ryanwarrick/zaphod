@@ -11,6 +11,8 @@
 # Summary
 Zaphod is a website built using Flask, and several other open-source tools, as a self-education project and for use as a personal website.
 
+**Want a demo?** Check out a live version of the website at [ryanwarrick.com](https://ryanwarrick.com).
+
 Zaphod has two primary 'content' sections:
 * Blog: a home for chronological, temporal posts
 * Articles: a home for long(er)-form, or perennial, articles
