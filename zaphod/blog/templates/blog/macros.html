@@ -15,7 +15,9 @@
         <i class="bi bi-calendar-event"></i><p class="m-1 text-right content-date">{{ post.date }}</p>
       </div>
     </div>
-    {{ post.html|safe }}
+    <div class="markdown-body">
+      {{ post.html|safe }}
+    </div>
   </article>
 {% endmacro %}
 

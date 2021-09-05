@@ -1,3 +1,7 @@
 .date-archive-year {
     border-color: var(--skobeloff)!important;
 }
+
+li>p {
+    margin-bottom: 0em!important;
+}
