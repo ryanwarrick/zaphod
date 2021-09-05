@@ -18,18 +18,6 @@
 }
 
 /*
- * Home temp
- */
-
-div.temp-message>ul, div.temp-message>h2 {
-  text-align: center;
-}
-
-div.temp-message ul {
-  list-style: inside;
-}
-
-/*
  * Nav
  */
 
