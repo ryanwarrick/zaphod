@@ -1,9 +1,9 @@
 from flask import Blueprint, current_app, g, render_template
-from sqlalchemy import desc, extract, text, funcfilter
+from sqlalchemy import desc, extract, funcfilter, text
 from sqlalchemy.orm import aliased
 from sqlalchemy.sql.functions import func
 from zaphod.blog import utils
-from zaphod.models import db, ContentType, Post, PostTag, PostTagMap
+from zaphod.models import ContentType, Post, PostTag, PostTagMap, db
 
 bp = Blueprint("blog",
                __name__,
@@ -15,7 +15,8 @@ bp = Blueprint("blog",
 
 @bp.route("/")
 def post_feed():
-    posts = Post.query.filter_by(content_type=ContentType.POST.name).all()
+    posts = Post.query.filter_by(
+        content_type=ContentType.POST.name).order_by(Post.date.desc()).all()
     return render_template('blog/post_feed.html', posts=posts)
 
 

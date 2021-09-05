@@ -157,7 +157,7 @@ class Article(Content):
 
 class Post(Content):
     __tablename__ = "Post"
-    date = db.Column(db.Text(200), unique=False, nullable=True)
+    date = db.Column(db.Date, unique=False, nullable=True)
     tags = db.relationship('PostTag', secondary=PostTagMap, lazy='subquery',
                            backref=db.backref('Posts', lazy=True))
 

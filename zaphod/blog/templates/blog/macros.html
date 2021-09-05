@@ -1,7 +1,7 @@
 {% macro blog_post(post) %}
   <article class="content my-2 p-2 border border-3">
     <h1 class="text-center content-title m-0" id="blog-title">
-      <a class="content-title-link" href="{{ url_for('blog.post', post_file_name=post.file_name) }}"> {{ post.file_name }} </a>
+      <a class="content-title-link" href="{{ url_for('blog.post', post_file_name=post.file_name) }}"> {{ post.title }} </a>
     </h1>
     <div class="row border-bottom border-2 m-1">
       <div class="tags col">
