@@ -273,16 +273,3 @@ def md_to_html(md_content):
         renderer=HighlightRenderer(parse_block_html=True))
     html = markdown_formatter(md_content)
     return html
-
-
-class DotaHero:
-    def __init__(self, name, leg_count):
-        self.name = name
-        self.leg_count = leg_count
-
-    def asDict(self):
-        d = {
-            'Name': self.name,
-            'Leg Count': self.leg_count
-        }
-        return d

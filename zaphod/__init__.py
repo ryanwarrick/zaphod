@@ -44,14 +44,12 @@ def create_app():
     # Apply the blueprints to the app
     from zaphod.articles.articles import bp as articles_bp
     from zaphod.blog.blog import bp as blog_bp
-    from zaphod.me.me import bp as me_bp
-    # from zaphod.dota.dota import bp as dota_bp # Not currently using the dota blueprint as it needs reworking in order to be compatible with the new DB. Leave blueprint unregistered and unimported for now.
     from zaphod.home.home import bp as home_bp
+    from zaphod.me.me import bp as me_bp
     app.register_blueprint(home_bp)
     app.register_blueprint(articles_bp)
     app.register_blueprint(blog_bp)
     app.register_blueprint(me_bp)
-    # app.register_blueprint(dota_bp) # Not currently using the dota blueprint as it needs reworking in order to be compatible with the new DB. Leave blueprint unregistered and unimported for now.
 
     # Set rule so domain root points to the 'home' route defined in the 'home' blueprint
     app.add_url_rule("/", endpoint="home.home")
