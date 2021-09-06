@@ -1,13 +1,13 @@
-import os
-import requests
 import json
+import os
 
+import requests
 from flask import Blueprint, current_app, render_template, send_file
 from zaphod.models import md_to_html
 
-bp = Blueprint("me",
+bp = Blueprint("career",
                __name__,
-               url_prefix="/me",
+               url_prefix="/career",
                template_folder='templates',
                static_folder="static"
                )
@@ -39,7 +39,7 @@ def resume():
 @bp.route('/projects')
 def projects():
     project_repos = get_project_repos()
-    return render_template('me/projects.html', projects=project_repos)
+    return render_template('career/projects.html', projects=project_repos)
 
 
 @bp.route('/projects/<project>')
@@ -59,4 +59,4 @@ def project(project):
     github_markdown_conversion_request = requests.post(
         'https://api.github.com/markdown', json=payload)
     html = github_markdown_conversion_request.text
-    return render_template('me/project.html', html=html, project=project, projects=project_repos)
+    return render_template('career/project.html', html=html, project=project, projects=project_repos)

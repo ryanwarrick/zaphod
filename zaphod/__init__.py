@@ -44,12 +44,12 @@ def create_app():
     # Apply the blueprints to the app
     from zaphod.articles.articles import bp as articles_bp
     from zaphod.blog.blog import bp as blog_bp
+    from zaphod.career.career import bp as career_bp
     from zaphod.home.home import bp as home_bp
-    from zaphod.me.me import bp as me_bp
     app.register_blueprint(home_bp)
     app.register_blueprint(articles_bp)
     app.register_blueprint(blog_bp)
-    app.register_blueprint(me_bp)
+    app.register_blueprint(career_bp)
 
     # Set rule so domain root points to the 'home' route defined in the 'home' blueprint
     app.add_url_rule("/", endpoint="home.home")

@@ -42,12 +42,12 @@
                   <a class="nav-link {% if request.path == '/' or request.path.startswith('/home') %}active{% endif %}" href="{{ url_for('home.home') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle {% if (request.path).startswith('/me') %}active{% endif %}" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
+                  <a class="nav-link dropdown-toggle {% if (request.path).startswith('/career') %}active{% endif %}" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown">
                     Career
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ url_for('me.resume') }}" target="_blank">Resume</a></li>
-                    <li><a class="dropdown-item" href="{{ url_for('me.projects') }}">Development Portfolio (Personal Projects)</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('career.resume') }}" target="_blank">Resume</a></li>
+                    <li><a class="dropdown-item" href="{{ url_for('career.projects') }}">Development Portfolio (Personal Projects)</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">

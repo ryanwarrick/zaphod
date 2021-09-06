@@ -1,4 +1,4 @@
-{% extends 'me/base.html' %}
+{% extends 'career/base.html' %}
 
 {% block title %}
 Development Portfolio (Personal Projects)
@@ -10,7 +10,7 @@ Development Portfolio (Personal Projects)
     <h1>Development Portfolio (Personal Projects)</h1>
     <p>Here's a collection of open source projects I've developed using various open source tools and libraries.</p>
     {% for key, value in projects.items() %}
-    <a class="project-link" href="{{ url_for('me.project', project=key) }}">{{ value['name']}} ({{ value['description'] }})</a>
+    <a class="project-link" href="{{ url_for('career.project', project=key) }}">{{ value['name']}} ({{ value['description'] }})</a>
     </br>
     {% endfor %}
   </div>
