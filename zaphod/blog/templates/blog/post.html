@@ -2,6 +2,10 @@
 
 {% import 'blog/macros.html' as macros %}
 
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
 {% block main_content %}
 <main class="container-fluid px-3">
   {{ macros.blog_post(post) }}

@@ -1,5 +1,9 @@
 {% extends 'me/base.html' %}
 
+{% block title %}
+{{ projects[project]['name'] }}
+{% endblock %}
+
 {% block head %}
   {{ super() }}
 

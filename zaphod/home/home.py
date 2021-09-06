@@ -1,7 +1,7 @@
 import os
 import time
 
-from flask import Blueprint, current_app, render_template, send_file, g
+from flask import Blueprint, current_app, g, render_template, send_file
 
 bp = Blueprint("home",
                __name__,
@@ -35,8 +35,3 @@ def after_app_request(response):
 @bp.route("/")
 def home():
     return render_template('home/home.html')
-
-
-@bp.route("/about")
-def about():
-    return render_template('home/about.html')
