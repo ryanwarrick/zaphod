@@ -5,3 +5,9 @@
 li>p {
     margin-bottom: 0em!important;
 }
+
+.view-full-post-btn {
+    margin-top: 10px!important;
+    font-size: small;
+    background-color: var(--skobeloff)!important;
+}

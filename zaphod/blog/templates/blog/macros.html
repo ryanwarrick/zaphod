@@ -1,4 +1,4 @@
-{% macro blog_post(post) %}
+{% macro blog_post(post, truncate_mode) %}
   <article class="content my-2 p-2 border border-3">
     <h1 class="text-center content-title m-0" id="blog-title">
       <a class="content-title-link" href="{{ url_for('blog.post', post_file_name=post.file_name) }}"> {{ post.title }} </a>
@@ -15,9 +15,26 @@
         <i class="bi bi-calendar-event"></i><p class="m-1 text-right content-date">{{ post.date }}</p>
       </div>
     </div>
-    <div class="markdown-body">
-      {{ post.html|safe }}
-    </div>
+    {% if truncate_mode and post.html|safe|length > 500 %}
+      {# if truncate_mode enabled & post exceeds truncate character limit: #}
+      {# ... show truncated post content (to truncate character limit) AND a "see full post" link #}
+      <div class="markdown-body">
+        {{ post.html|safe|truncate(500) }}
+      </div>
+      <div>
+      <a href="{{ url_for('blog.post', post_file_name=post.file_name) }}" class="view-full-post-btn btn btn-secondary btn-sm active" role="button">
+        <i class="bi bi-plus-circle"></i>
+        View Full Post
+      </a>
+        {# <a class="see-more-link" href="{{ url_for('blog.post', post_file_name=post.file_name) }}"> View Full Post </a> #}
+      </div>
+    {% else %}
+      {# else: show full post content #}
+      <div class="markdown-body">
+        {{ post.html|safe }}
+      </div>
+    {% endif %}
+
   </article>
 {% endmacro %}
 

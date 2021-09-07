@@ -33,7 +33,7 @@ def resume():
         'misc_assets',
         resume_file_name
     )
-    return send_file(resume_file_path)
+    return send_file(resume_file_path, download_name=resume_file_name)
 
 
 @bp.route('/projects')

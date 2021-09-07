@@ -9,7 +9,7 @@ Blog Posts
 {% block main_content %}
 <main class="container-fluid px-3">
   {% for post in posts %}
-    {{ macros.blog_post(post) }}
+    {{ macros.blog_post(post, truncate_mode=True) }}
   {% endfor %}
 </main>
 {% endblock %}
