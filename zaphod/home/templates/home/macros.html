@@ -1,0 +1,15 @@
+{% macro home_shortcut(text, link, color, external_link=False, url_for_values=None, link_target="_self") %}
+  <div class="home_shortcut col-sm-5 position-relative m-2 p-0">
+    {% if external_link %}
+      <a href="{{ link }}" target="_blank" class="stretched-link">
+    {% elif url_for_values is not none and not external_link %}
+      <a href="{{ url_for(link, **url_for_values) }}" target="{{ link_target }}" class="stretched-link">
+    {% else %}
+      <a href="{{ url_for(link) }}" target="{{ link_target }}" class="stretched-link">
+    {% endif %}
+      <div class="h-100 d-flex justify-content-center align-items-center border border-dark rounded p-0 m-0" style="background-color: var(--{{ color }});">
+        <h1 class="text-center text-nowrap">{{ text }}</h1>
+      </div>
+    </a>
+  </div>
+{% endmacro %}

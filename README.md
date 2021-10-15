@@ -44,7 +44,7 @@ Zaphod is responsible for the front-end, back-end, and database elements of the 
 * Dev-Ops
   * zaphod_ansible (separate project):
     * A 'deployment helper' DevOps tool I built for Zaphod.
-    * For more info, see the zaphod_ansible [write-up](http://ryanwarrick.com/) on the website or check out the GitHub [repo](https://github.com/ryanwarrick/zaphod_ansible).
+    * For more info, see the zaphod_ansible [write-up](http://ryanwarrick.com/career/projects/zaphod_ansible) on the website or check out the GitHub [repo](https://github.com/ryanwarrick/zaphod_ansible).
   * utils/utils.py:
     * A 'development/build helper' script I built for Zaphod. The cmd-line tool generates virtual environments for development/build purposes. Additionally, the tool also builds packages (wheels) for use by zaphod_ansible in deployments.
 

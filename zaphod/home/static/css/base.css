@@ -15,6 +15,9 @@
   --uranian-blue: #AFD2E9;
   --post-background: #e5e4e6;
   --tree-green: #546347;
+  --old-rose: #CB807D;
+  --sage: #B0B380;
+  --laurel-green: #98A989;
 }
 
 /*
@@ -101,6 +104,19 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: 'Open Sans', sans-serif;
+}
+
+/*
+ * Home Shortcuts
+ */
+
+.home_shortcut {
+  position: relative;
+  overflow: hidden;
+}
+
+.home_shortcut a {
+  color: var(--onyx);
 }
 
 /*

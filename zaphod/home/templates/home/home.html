@@ -1,23 +1,55 @@
 {% extends 'home/base.html' %}
 
+{% import 'home/macros.html' as macros %}
+
 {% block title %}
 Home
 {% endblock %}
 
 {% block main_content %}
-<div class="container">
-  <div class="row">
-    <h2 class="col text-center">Website Currently Under Development</h2>
+  <div class="container-fluid m-3 p-1">
+    <div class="row justify-content-center bg-warning">
+      <div class="col-sm-auto">
+        <h3 class="text-center">Note: Website Currently Under Development</h3>
+      </div>
+      <div class="row justify-content-center mx-1">
+        <ul class="col-sm-auto">
+          <li>Blog posts are being added slowly. More content coming soon.</li>
+          <li>Filler article content added for testing & example purposes.</li>
+        </ul>
+      </div>
+    </div>
+    </br>
+    <div class="row justify-content-center">
+      <div class="col-sm-auto">
+        <p class="text-center m-0">This website is built by me, Ryan Warrick, using various open source tools and frameworks.</p>
+        <p class="m-0 mt-2">The purpose of website is as follows:</p>
+      </div>
+    </div>
+    <div class="row justify-content-center mx-1">
+      <ul class="col-sm-auto">
+        <li>Professional portfolio</li>
+        <li>Blog and personal and writing outlet</li>
+        <li>Intro learning for full stack web development</li>
+        <li>Intro learning for DevOps & IaaC</li>
+        <li>Additional learning for web administration (DNS, security headers, etc.) </li>
+        <li>Additional learning for Linux administration (service configs, file permissions, etc.) </li>
+        <li>Additional learning for public cloud platforms (GCP, AWS) </li>
+        <li>Deeper learning for Python and Flask</li>
+      </ul>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-sm-auto">
+        <h1 class="text-center font-weight-bold">Quick Links</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      {{ macros.home_shortcut("Resume", 'career.resume', 'uranian-blue', link_target="_blank") }}
+      {{ macros.home_shortcut("GitHub Profile", 'https://github.com/ryanwarrick', 'cotton-candy', external_link=True) }}
+      {{ macros.home_shortcut("Website Docs", 'career.project', 'skobeloff', url_for_values={"project": "zaphod"}) }}
+      {{ macros.home_shortcut("Blog Posts", 'blog.post_feed', 'laurel-green') }}
+    </div>
   </div>
-  <div class="row justify-content-center mx-1">
-    <ul class="col-auto">
-      <li>Skeleton/filler content added throughout site for testing & example purposes only</li>
-      <li>Actual blog posts are slowly being added. More real content coming soon...</li>
-      <li>Website Source code and project documentation published on GitHub - <a href="https://github.com/ryanwarrick/zaphod">Zaphod Repo</a></li>
-      <li>DevOps automation helper source code and project documentation published on GitHub - <a href="https://github.com/ryanwarrick/zaphod_ansible">Zaphod_Ansible Repo</a></li>
-    </ul>
-  </div>
-</div>
 {% endblock %}
 
 {% block header %}
