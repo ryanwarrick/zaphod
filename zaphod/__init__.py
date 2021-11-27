@@ -35,6 +35,16 @@ def create_app():
     @app.context_processor
     def inject_datetime_now():
         return {'now': datetime.utcnow()}
+    # For instance-specific footer info
+
+    @app.context_processor
+    def inject_website_author_name():
+        return {'website_author_name': app.config['WEBSITE_AUTHOR_NAME']}
+    # For instance-specific footer info
+
+    @app.context_processor
+    def inject_website_url():
+        return {'website_url': app.config['WEBSITE_URL']}
 
     # Initialize Flask-SQLAlchemy and the init-db commands
     from zaphod.models import db
