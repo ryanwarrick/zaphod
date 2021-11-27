@@ -43,6 +43,20 @@ def generate_articles_relative_file_path_for_directory_item(context):
     return articles_relative_file_path
 
 
+def generate_url_friendly_file_name_for_content(context):
+    # Split name and extension for making URL friendly
+    file_name, file_ext = os.path.splitext(
+        context.get_current_parameters()['file_name'])
+    # Remove all non-word characters (everything except numbers and letters)
+    url_friendly_file_name = re.sub(r"[^\w\s-]", '', file_name)
+    # Replace all runs of whitespace with a single dash
+    file_name = re.sub(r"\s+", '-', file_name)
+    # Recombine name and extension
+    url_friendly_file_name = file_name + file_ext
+
+    return url_friendly_file_name
+
+
 PostTagMap = db.Table(
     'PostTagMap',
     db.Column('tag_id',
@@ -79,7 +93,7 @@ class Content(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     content_type = db.Column(db.Enum(ContentType))
-    file_name = db.Column(db.String(50), unique=True, nullable=False)
+    file_name = db.Column(db.String(100), unique=True, nullable=False)
     file_path = db.Column(db.String(200), unique=False, nullable=False)
     title = db.Column(db.String(200), unique=False, nullable=False)
     summary = db.Column(db.String(200), unique=False, nullable=False)
@@ -88,6 +102,8 @@ class Content(db.Model):
                                  default=generate_file_name_no_ext_for_content)
     html = db.Column(db.Text(2000), unique=False, nullable=False,
                      default=generate_html_for_content)
+    url_friendly_file_name = db.Column(db.String(100), unique=True, nullable=False,
+                                       default=generate_url_friendly_file_name_for_content)
 
     def __init__(self, **kwargs):
         # Call init of db.Model (super/parent class)

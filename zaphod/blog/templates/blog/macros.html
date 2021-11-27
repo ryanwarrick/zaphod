@@ -1,7 +1,7 @@
 {% macro blog_post(post, truncate_mode) %}
   <article class="content my-2 p-2 border border-3">
     <h1 class="text-center content-title m-0" id="blog-title">
-      <a class="content-title-link" href="{{ url_for('blog.post', post_file_name=post.file_name) }}"> {{ post.title }} </a>
+      <a class="content-title-link" href="{{ url_for('blog.post', url_friendly_post_file_name=post.url_friendly_file_name) }}"> {{ post.title }} </a>
     </h1>
     <div class="row border-bottom border-2 m-1">
       <div class="tags col">
@@ -28,7 +28,7 @@
         </div>
       {% endif %}
       <div>
-        <a href="{{ url_for('blog.post', post_file_name=post.file_name) }}" class="view-full-post-btn btn btn-secondary btn-sm active" role="button">
+        <a href="{{ url_for('blog.post', url_friendly_post_file_name=post.url_friendly_file_name) }}" class="view-full-post-btn btn btn-secondary btn-sm active" role="button">
           <i class="bi bi-plus-circle"></i>
           View Full Post
         </a>

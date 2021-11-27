@@ -35,9 +35,10 @@ def posts_by_tag(selected_tag):
     return render_template('blog/post_feed.html', posts=posts)
 
 
-@bp.route('/<post_file_name>')
-def post(post_file_name):
-    post = Post.query.filter_by(file_name=post_file_name).first_or_404()
+@bp.route('/<url_friendly_post_file_name>')
+def post(url_friendly_post_file_name):
+    post = Post.query.filter_by(
+        url_friendly_file_name=url_friendly_post_file_name).first_or_404()
     return render_template('blog/post.html', post=post)
 
 
