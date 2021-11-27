@@ -145,7 +145,7 @@ def main():
     argument_parser.add_argument(
         "-r", "--refresh-build",
         action="store_true",
-        help="Clean project dir, generate new venv, & push to / deploy on production server."
+        help="Clean project dir, generate new venv, & build package wheel for deployment on production server."
     )
     args = argument_parser.parse_args()
 
