@@ -22,7 +22,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "__init__.py",
+                "FLASK_APP": "zaphod/__init__.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "1"
             },

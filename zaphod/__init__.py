@@ -66,7 +66,7 @@ def create_app():
     app.register_blueprint(blog_bp)
     app.register_blueprint(career_bp)
 
-    # Set rule so domain root points to the 'home' route defined in the 'home' blueprint
+    # Set rule so domain root points to the site root path target defined in the config file
     app.add_url_rule("/", endpoint=app.config['SITE_ROOT_PATH_TARGET'])
 
     # Set the 404 error handler
