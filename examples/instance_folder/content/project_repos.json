@@ -1,0 +1,14 @@
+{
+    "zaphod": {
+        "name": "Zaphod",
+        "description": "this website",
+        "repo_url": "https://github.com/ryanwarrick/zaphod",
+        "raw_content_repo_url": "https://raw.githubusercontent.com/ryanwarrick/zaphod/master/"
+    },
+    "zaphod_ansible": {
+        "name": "Zaphod Ansible",
+        "description": "'Deployment helper' DevOps tool for this website",
+        "repo_url": "https://github.com/ryanwarrick/zaphod_ansible",
+        "raw_content_repo_url": "https://raw.githubusercontent.com/ryanwarrick/zaphod_ansible/master/"
+    }
+}
