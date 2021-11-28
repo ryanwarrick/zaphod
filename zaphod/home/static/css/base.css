@@ -31,15 +31,16 @@
   - Nav bar dropdown background
   */
 
-  --delta: #313638;
+  --delta: #949494;
+  /* Uses:
+  - Blog post tag background
+  */
+
+  --epsilon: #313638;
   /* Uses:
   - Front page 'quick links' link text
   */
 
-  --epsilon: #949494;
-  /* Uses:
-  - Blog post tag background
-  */
 
   /*
   Front page quick links - button backgrounds (see below)
