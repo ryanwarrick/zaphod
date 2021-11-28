@@ -33,7 +33,12 @@
 
   --delta: #313638;
   /* Uses:
-    Front page 'quick links' link text
+  - Front page 'quick links' link text
+  */
+
+  --epsilon: #949494;
+  /* Uses:
+  - Blog post tag background
   */
 
   /*

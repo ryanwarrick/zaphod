@@ -35,7 +35,7 @@
 .content .tags>.tag-link {
   font-size: small;
   color: #ffffff;
-  background: #949494;
+  background: var(--epsilon);
   text-decoration: none;
   text-transform: uppercase;
 }
