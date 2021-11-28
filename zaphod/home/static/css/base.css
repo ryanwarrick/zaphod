@@ -5,27 +5,61 @@
  */
 
 :root {
-  /* CSS HEX */
-  --persian-rose: #f7389d;
-  --skobeloff: #408585;
-  --skobeloff-old: #297373;
-  --pale-spring-bud: #e3e4d2;
-  --onyx: #313638;
-  --cotton-candy: #ffc2d9;
+  /* Custom properties set on the ':root' pseudo-class can be applied globally across HTML document */
+
+  /*
+  CSS color variable definitions
+  */
+
+  --alpha: #546347;
+  /* Uses:
+  - Nav bar background
+  - Blog/Article content title link
+  - Blog/Article content header bottom border (separates content header from content body)
+  */
+
+  --beta: #408585;
+  /* Uses:
+  - Blog/article content border
+  - 'View Full Post' button background
+  - Blog archive year border
+  */
+
+  --gamma: #e3e4d2;
+  /* Uses:
+  - Body (main) background
+  - Nav bar dropdown background
+  */
+
+  --delta: #313638;
+  /* Uses:
+    Front page 'quick links' link text
+  */
+
+  /*
+  Front page quick links - button backgrounds (see below)
+  */
+  /* Resume */
   --uranian-blue: #AFD2E9;
-  --post-background: #e5e4e6;
-  --tree-green: #546347;
-  --old-rose: #CB807D;
-  --sage: #B0B380;
+  /* GitHub Profile */
+  --cotton-candy: #ffc2d9;
+  /* Website Docs */
+  --mountbatten-pink: #A88A94;
+  /* Blog Posts */
   --laurel-green: #98A989;
+
 }
 
 /*
  * Nav
  */
 
-nav.navbar, nav.navbar>div.navbar-collapse>ul.navbar-nav>li.dropdown>ul.dropdown-menu {
-  background: var(--tree-green) !important;
+nav.navbar {
+  background: var(--alpha) !important;
+}
+
+nav.navbar ul.dropdown-menu {
+  background: var(--gamma) !important;
 }
 
 nav.navbar ul.dropdown-menu {
@@ -56,10 +90,6 @@ nav.navbar ul.dropdown-menu {
     display: none;
   }
 }
-
-/* ul.dropdown-menu {
-  background: var(--pale-spring-bud)!important;
-} */
 
 /*
  * Banner
@@ -97,7 +127,7 @@ img.banner-home {
  */
 
 body {
-  background: var(--pale-spring-bud);
+  background: var(--gamma);
 }
 
 a:hover {
@@ -122,7 +152,7 @@ p {
 }
 
 .home_shortcut a {
-  color: var(--onyx);
+  color: var(--delta);
 }
 
 /*

@@ -6,12 +6,7 @@
 
 .content {
   background: white;
-  border-color: var(--skobeloff)!important;
-}
-
-.content .content-title {
-  color: var(--tree-green);
-  font-weight: bold;
+  border-color: var(--beta) !important;
 }
 
 .content .content-date>i, .content-date>p {
@@ -20,13 +15,13 @@
 }
 
 .content .content-title-link {
-  color: var(--tree-green);
+  color: var(--alpha);
   font-weight: bold;
 }
 
-.content>.border-bottom {
-  border-bottom-color: var(--tree-green)!important;
-  border-bottom-style: dashed!important;
+.content>.content-header-bottom-border {
+  border-bottom-color: var(--alpha) !important;
+  border-bottom-style: dashed !important;
 }
 
 .content .tags>.tag-link, .tags>.tag-icon {

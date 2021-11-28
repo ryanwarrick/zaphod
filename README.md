@@ -193,9 +193,6 @@ To avoid data loss of these files that aren't Git tracked, make sure to backup t
 
 # TODO - Possible Future Improvements:
 Below are some, but not all, possible future improvements to be developed for the project.
-- [x] Add skeleton/filler data in examples dir under project root so that other users can work from examples when creating custom instance data including: blog post files, article files, project_repos file, resume, etc.
-- [ ] Improve color theming of website. Swap out hardcoded specific color variable names for use-based aliases such as "main-background", "footer-background", "navbar-text", etc. instead of "persian-rose" or "skobeloff"
-- [ ] Explore moving color theming preferences (see above bullet) to config file, rather than hardcoded CSS variable values.
-- [x] Improve styling of the website (colors, spacing, etc.)
+- [ ] Add link breadcrumb trail to articles section, to allow for easier navigation "back up the tree".
 - [ ] Explore configurations/options available within Flask to improve security posture and remediate vulnerabilities
 - [ ] Write and integrate tests (pytest or others) to the development process.

@@ -3,7 +3,7 @@
     <h1 class="text-center content-title m-0" id="blog-title">
       <a class="content-title-link" href="{{ url_for('blog.post', url_friendly_post_file_name=post.url_friendly_file_name) }}"> {{ post.title }} </a>
     </h1>
-    <div class="row border-bottom border-2 m-1">
+    <div class="row content-header-bottom-border border-2 m-1">
       <div class="tags col">
         <i class="tag-icon bi bi-tags"></i>
           {% for tag in post.tags %}

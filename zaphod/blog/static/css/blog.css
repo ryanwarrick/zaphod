@@ -1,13 +1,17 @@
-.date-archive-year {
-    border-color: var(--skobeloff)!important;
-}
-
 li>p {
-    margin-bottom: 0em!important;
+    margin-bottom: 0em !important;
 }
 
 .view-full-post-btn {
-    margin-top: 10px!important;
+    margin-top: 10px !important;
     font-size: small;
-    background-color: var(--skobeloff)!important;
+    background-color: var(--beta) !important;
+}
+
+/*
+ * Date Archive
+*/
+
+.date-archive-year {
+    border-color: var(--beta) !important;
 }
