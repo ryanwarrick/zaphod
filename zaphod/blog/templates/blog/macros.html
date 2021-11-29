@@ -20,7 +20,7 @@
       {# ... show truncated post content (if not .HTML source) AND a "see full post" link #}
       {% if (post.file_name|string).endswith(".html") %}
         <div class="markdown-body">
-          <p>(Preview not available)</p>
+          <p class="font-italic">(Preview not available)</p>
         </div>
       {% else %}
         <div class="markdown-body">
