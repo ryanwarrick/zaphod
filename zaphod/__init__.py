@@ -48,8 +48,13 @@ def create_app():
 
     # For instance-specific site root path target
     @app.context_processor
-    def site_root_path_target():
-        return {'site_root_path_target': app.config['SITE_ROOT_PATH_TARGET']}
+    def website_root_path_target():
+        return {'website_root_path_target': app.config['WEBSITE_ROOT_PATH_TARGET']}
+
+    # For instance-specific site root path target
+    @app.context_processor
+    def website_name():
+        return {'website_name': app.config['WEBSITE_NAME']}
 
     # Initialize Flask-SQLAlchemy and the init-db commands
     from zaphod.models import db
@@ -67,7 +72,7 @@ def create_app():
     app.register_blueprint(career_bp)
 
     # Set rule so domain root points to the site root path target defined in the config file
-    app.add_url_rule("/", endpoint=app.config['SITE_ROOT_PATH_TARGET'])
+    app.add_url_rule("/", endpoint=app.config['WEBSITE_ROOT_PATH_TARGET'])
 
     # Set the 404 error handler
     app.register_error_handler(404, page_not_found)

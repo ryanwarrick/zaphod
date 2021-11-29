@@ -4,6 +4,7 @@
 
 SECRET_KEY = 'dev'  # Default value
 WEBSITE_AUTHOR_NAME = 'John Doe'
+WEBSITE_NAME = 'Example Website'
 WEBSITE_URL = 'https://example.com/'
 RESUME_FILE_NAME = 'Resume.pdf'
-SITE_ROOT_PATH_TARGET = 'home.home'
+WEBSITE_ROOT_PATH_TARGET = 'home.home'
