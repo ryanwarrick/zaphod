@@ -193,6 +193,7 @@ To avoid data loss of these files that aren't Git tracked, make sure to backup t
 
 # TODO - Possible Future Improvements:
 Below are some, but not all, possible future improvements to be developed for the project.
+- [ ] Fix page titles by adding prefix of "Ryan Warrick - " in front of the current titles like "Home" or "Blog Posts"
 - [ ] Add link breadcrumb trail to articles section, to allow for easier navigation "back up the tree".
 - [ ] Explore configurations/options available within Flask to improve security posture and remediate vulnerabilities
 - [ ] Write and integrate tests (pytest or others) to the development process.
