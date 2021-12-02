@@ -41,6 +41,11 @@
   - Front page 'quick links' link text
   */
 
+  --zeta: #1784e9;
+  /* Uses:
+  - Archive Pages (Blog dates and tags archives) link text
+  */
+
 
   /*
   Front page quick links - button backgrounds (see below)
@@ -159,6 +164,14 @@ p {
 
 .home_shortcut a {
   color: var(--epsilon);
+}
+
+/*
+ * Archive Pages (Date Archive and Tags Archive)
+ */
+
+.archive_link {
+  color: var(--zeta)
 }
 
 /*

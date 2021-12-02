@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block title %}
-Blog Tags
+Tags - {{ super() }}
 {% endblock %}
 
 {% block main_content %}
@@ -10,7 +10,7 @@ Blog Tags
     <h1>Tags</h1>
     {# {% set tag_frequency_tuples = data %} #}
     {% for tag_frequency in tag_frequency_table %}
-      <a class="tag" href="{{ url_for('blog.posts_by_tag', selected_tag=tag_frequency[0]) }} ">{{ tag_frequency[0] }} ({{ tag_frequency[1] }})</a>
+      <a class="archive_link" href="{{ url_for('blog.posts_by_tag', selected_tag=tag_frequency[0]) }} ">{{ tag_frequency[0] }} ({{ tag_frequency[1] }})</a>
       </br>
     {% endfor %}
   </div>

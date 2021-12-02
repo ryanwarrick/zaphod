@@ -50,7 +50,7 @@
   {% endif %}
     <h3 class="my-0">{{ year }}</h3>
     {% for month in date_data[year] %}
-      <a class="date_archive" href="{{ url_for('blog.post_feed_date_archive_by_year_and_month', year=year, month=month) }} ">{{ num_to_month_dict[month] }} ({{ date_data[year][month] }}) </a>
+      <a class="archive_link" href="{{ url_for('blog.post_feed_date_archive_by_year_and_month', year=year, month=month) }} ">{{ num_to_month_dict[month] }} ({{ date_data[year][month] }}) </a>
       <br>
     {% endfor %}
   </div>

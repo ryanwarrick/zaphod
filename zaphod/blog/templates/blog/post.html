@@ -3,7 +3,7 @@
 {% import 'blog/macros.html' as macros %}
 
 {% block title %}
-{{ post.title }}
+{{ post.title }} - {{ super() }}
 {% endblock %}
 
 {% block main_content %}
